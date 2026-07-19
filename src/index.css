@@ -1,0 +1,238 @@
+:root {
+  --pine-900: #133228;
+  --pine-800: #1b4a3a;
+  --pine-700: #235c48;
+  --pine-600: #2f7a5b;
+  --pine-100: #e7f1e9;
+  --amber-500: #e8a33d;
+  --amber-600: #cf8a25;
+  --clay-500: #d9704a;
+  --cream: #f7f4ec;
+  --paper: #fffdf8;
+  --ink: #1c2a22;
+  --ink-soft: #52645a;
+  --line: #e1ddd0;
+  --danger: #c94a3b;
+
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 9px;
+  --shadow-soft: 0 18px 40px -22px rgba(19, 50, 40, 0.35);
+  --shadow-card: 0 10px 24px -14px rgba(19, 50, 40, 0.28);
+  --container: 1180px;
+
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--cream);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#beranda,
+#tentang,
+#wahana,
+#paket,
+#lokasi,
+#ulasan {
+  scroll-margin-top: 96px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--pine-900);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.icon {
+  color: currentColor;
+  flex-shrink: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pine-700);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--amber-500);
+  display: inline-block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--pine-700);
+  color: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.btn-primary:hover {
+  background: var(--pine-800);
+}
+
+.btn-amber {
+  background: var(--amber-500);
+  color: var(--pine-900);
+}
+
+.btn-amber:hover {
+  background: var(--amber-600);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--pine-700);
+  color: var(--pine-700);
+}
+
+.btn-outline:hover {
+  background: var(--pine-100);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--pine-800);
+  padding: 8px 4px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section-tight {
+  padding: 56px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 600;
+}
+
+.card {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--amber-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 56px 0;
+  }
+}
